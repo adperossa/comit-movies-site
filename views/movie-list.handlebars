@@ -1,0 +1,46 @@
+<div class="row heading">
+  <div class="col text-right">
+
+    <button class="button clear icon list-filter">
+      {{#if order.namedesc}}
+        <a href="/movie-list?sort=name&order=asc">Sort by name</a>
+        <img src="https://icongr.am/feather/chevron-up.svg?size=16&color=464953" alt="asc">
+      {{else}}
+        <a href="/movie-list?sort=name&order=desc">Sort by name</a>
+        <img src="https://icongr.am/feather/chevron-down.svg?size=16&color=464953" alt="desc">
+      {{/if}}
+    </button>
+
+    <button class="button clear icon list-filter">
+      {{#if order.datedesc}}
+        <a href="/movie-list?sort=date&order=asc">Sort by date</a>
+        <img src="https://icongr.am/feather/chevron-up.svg?size=16&color=464953" alt="asc">
+      {{else}}
+        <a href="/movie-list?sort=date&order=desc">Sort by date</a>
+        <img src="https://icongr.am/feather/chevron-down.svg?size=16&color=464953" alt="desc">
+      {{/if}}
+    </button>
+
+  </div>
+</div>
+ 
+  
+ 
+ 
+<div class="row">
+  {{#each movies}}
+    <div class="col-3">
+      <div class="card is-center movie-item">
+        <figure>
+          <a href="/movie/{{this.id}}">
+            <img src="{{this.cover}}" alt="{{this.title}}">
+            <figcaption>
+              {{this.title}} ({{this.year}})
+            </figcaption>
+          </a>
+        </figure>
+      </div>
+    </div>
+  {{/each}}
+
+</div>

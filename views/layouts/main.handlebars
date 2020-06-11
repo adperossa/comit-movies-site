@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+  <link rel="stylesheet" href="/style.css">
+  <title>Filmography</title>
+</head>
+
+<body>
+  <div class="container main">
+
+    <nav class="nav">
+      <div class="nav-left">
+        <div class="tabs">
+          {{#if isHomeView}}
+          <a href="/" class="active">Home</a>
+          <a href="/movie-list">Movie List</a>
+          {{else}}
+          <a href="/">Home</a>
+          <a href="/movie-list" class="active">Movie List</a>
+          {{/if}}
+        </div>
+      </div>
+    </nav>
+
+    {{{body}}}
+
+  </div>
+
+  <footer class="is-text-center">
+    <p>Copyleft Axel Perossa</p>
+  </footer>
+
+</body>
+
+</html>
